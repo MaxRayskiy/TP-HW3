@@ -12,5 +12,5 @@ public:
     virtual void Payload(int weight) = 0;
     virtual void Upgrade(int parameter, int state) = 0;
 
-    ~Unit() = default;
+    virtual ~Unit() = default;
 };

@@ -23,7 +23,7 @@ Ship::Ship(int r_type, int r_number)
             speed = 50;
             fuel_capacity = 51120;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 102: { // in 3 class config
@@ -31,7 +31,7 @@ Ship::Ship(int r_type, int r_number)
             speed = 50;
             fuel_capacity = 45810;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 103: { // in 2 class config

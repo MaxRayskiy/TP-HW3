@@ -23,7 +23,7 @@ Airplane::Airplane(int r_type, int r_number)
             speed = 860;
             fuel_capacity = 181120;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 2: { // in 3 class config
@@ -31,7 +31,7 @@ Airplane::Airplane(int r_type, int r_number)
             speed = 860;
             fuel_capacity = 145810;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 3: { // in 2 class config

@@ -23,7 +23,7 @@ Train::Train(int r_type, int r_number)
             speed = 120;
             fuel_capacity = 51120;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 202: { // in 3 class config
@@ -31,7 +31,7 @@ Train::Train(int r_type, int r_number)
             speed = 150;
             fuel_capacity = 45810;
             range = 10190;
-            max_payload = 103700
+            max_payload = 103700;
             break;
         }
         case 203: { // in 2 class config
@@ -52,7 +52,7 @@ Train::Train(int r_type, int r_number)
         }
     }
 }
-}
+
 
 std::vector<int> Train::GetInfo() {
     std::vector<int> info = {type, number, location, state, crew, payload, seat_limit, first_class, second_class,
