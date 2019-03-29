@@ -5,7 +5,7 @@ Airplane::Airplane(int r_type, int r_number)
     , number(r_number)
     , location(0)
     , state(100)
-    , crew(0)
+    , crew(2)
     , payload(0)
     , seat_limit(0)
     , first_class(0)  // 8
@@ -16,7 +16,43 @@ Airplane::Airplane(int r_type, int r_number)
     , fuel_level(0)  // 13
     , range(0)
     , max_payload(0)  // 15
-{}
+{
+    switch (type) {
+        case 1: {  // cargo
+            seat_limit = 0;
+            speed = 860;
+            fuel_capacity = 181120;
+            range = 10190;
+            max_payload = 103700
+            break;
+        }
+        case 2: { // in 3 class config
+            seat_limit = 400;
+            speed = 860;
+            fuel_capacity = 145810;
+            range = 10190;
+            max_payload = 103700
+            break;
+        }
+        case 3: { // in 2 class config
+            seat_limit = 420;
+            speed = 860;
+            fuel_capacity = 171160;
+            range = 10190;
+            max_payload = 101200;
+            break;
+        }
+        case 4: { // in 1 class config
+            seat_limit = 480;
+            speed = 860;
+            fuel_capacity = 171160;
+            range = 10190;
+            max_payload = 101200;
+            break;
+        }
+    }
+
+}
 
 std::vector<int> Airplane::GetInfo() {
     std::vector<int> info = {type, number, location, state, crew, payload, seat_limit, first_class, second_class,

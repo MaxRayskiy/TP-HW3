@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.13)
-project(HW3)
+cmake_minimum_required(VERSION 2.6)
 
-set(CMAKE_CXX_STANDARD 14)
+add_definitions(-Wall -std=c++0x -D HOME)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 
-add_executable(HW3 main.cpp BuildAirplane.cpp Airplane.cpp Ship.cpp ShipFactory.cpp Train.cpp TrainFactory.cpp AirplaneFactory.cpp BuildTrain.cpp BuildShip.cpp)
+add_executable(executeTests test.cpp)
+
+target_link_libraries(executeTests ${GTEST_LIBRARIES} pthread)

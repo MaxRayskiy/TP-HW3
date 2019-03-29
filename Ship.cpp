@@ -16,7 +16,42 @@ Ship::Ship(int r_type, int r_number)
         , fuel_level(0)  // 13
         , range(0)
         , max_payload(0)  // 15
-{}
+{
+    switch (type) {
+        case 101: {  // cargo
+            seat_limit = 0;
+            speed = 50;
+            fuel_capacity = 51120;
+            range = 10190;
+            max_payload = 103700
+            break;
+        }
+        case 102: { // in 3 class config
+            seat_limit = 400;
+            speed = 50;
+            fuel_capacity = 45810;
+            range = 10190;
+            max_payload = 103700
+            break;
+        }
+        case 103: { // in 2 class config
+            seat_limit = 420;
+            speed = 50;
+            fuel_capacity = 171160;
+            range = 10190;
+            max_payload = 101200;
+            break;
+        }
+        case 104: { // in 1 class config
+            seat_limit = 480;
+            speed = 50;
+            fuel_capacity = 171160;
+            range = 10190;
+            max_payload = 101200;
+            break;
+        }
+    }
+}
 
 std::vector<int> Ship::GetInfo() {
     std::vector<int> info = {type, number, location, state, crew, payload, seat_limit, first_class, second_class,
