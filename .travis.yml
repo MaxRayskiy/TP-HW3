@@ -76,11 +76,6 @@ before_install:
   - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   - which valgrind
   - cd "${TRAVIS_BUILD_DIR}"
-before_script:
-  - cd test/
-  - cmake -Dtest=ON ../
-  - make
-  - ls -l
 
 script:
     - cd /usr/src/gtest
