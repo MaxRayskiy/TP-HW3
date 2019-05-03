@@ -1,8 +1,10 @@
-#include "game.cpp"
 #include <algorithm>
 #include <vector>
-
 #include "gtest/gtest.h"
+#include "Abstractfactory.h"
+#include "BuildAirplane.h"
+#include "AirplaneFactory.h"
+
 
 class TestAirplane : public testing::Test {
 protected:
