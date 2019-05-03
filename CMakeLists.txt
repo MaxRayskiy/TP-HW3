@@ -4,7 +4,7 @@ project(TP-HW3)
 #include(gtest.cmake)
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(executeTests test.cpp)
+add_executable(executeTests test.cpp game.cpp game.h)
 
 target_link_libraries(executeTests ${GTEST_LIBRARIES} pthread)
 
