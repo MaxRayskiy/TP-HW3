@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 
 class TestAirplane : public testing::Test {
 protected:
