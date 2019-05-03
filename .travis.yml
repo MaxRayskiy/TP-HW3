@@ -1,33 +1,14 @@
+dist: trusty
 sudo: false
 language: cpp
-compiler:
-  - gcc
-  - clang
-os:
-  - linux
 
-matrix:
-  include:
-    - os: linux
-      env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
-      addons:
-        apt:
-          packages:
-            - g++-5
-          sources: &sources
-            - llvm-toolchain-precise-3.8
-            - ubuntu-toolchain-r-test
-    - os: linux
-      env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
-      addons:
-        apt:
-          packages:
-            - clang-3.8
-          sources: *sources
-
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-trusty-5.0
+    packages:
+      - clang-5.0
 
 script:
-
-    - cmake CMakeLists.txt
-    - make ./executeTests
-    - ./executeTests
+  - CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
+  - cmake --build .
