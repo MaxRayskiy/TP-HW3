@@ -27,8 +27,10 @@ matrix:
 
 
 script:
-    - g++ graph_test.cpp -std=c++17 -o travis_gcc_cpp17
-    - ./travis_gcc_cpp17
+    - cd /usr/src/gtest
+    - sudo cmake .
+    - sudo make
+    - sudo mv libg* /usr/lib/
 
     - cmake CMakeLists.txt
     - make ./executeTests
