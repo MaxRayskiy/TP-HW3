@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Units/Unit.h"
-#include "../Factories/AbstractFactory.h"
+#include "AbstractFactory.h"
 
 class ShipFactory: public AbstractFactory {
 public:

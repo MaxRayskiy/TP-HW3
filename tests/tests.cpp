@@ -4,7 +4,7 @@
 #include "../Factories/AbstractFactory.h"
 #include "../Units/Unit.h"
 #include "../Builders/BuildAirplane.h"
-#include "../Builders/AirplaneFactory.h"
+#include "../Factories/AirplaneFactory.h"
 
 
 class TestAirplane : public testing::Test {
