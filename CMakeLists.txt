@@ -1,19 +1,12 @@
-
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.13)
 
 project(TP-HW3)
-#include(gtest.cmake)
+
+#set(CMAKE_CXX_STANDARD 14)
+add_subdirectory(tests)
+#check it!
+
+add_executable(executeSomething game.cpp)
 
 
-add_executable(executeTests test.cpp game.cpp game.h)
 
-target_link_libraries(executeTests ${GTEST_LIBRARIES} pthread)
-
-
-# GTest needs threading support
-#find_package (Threads)
-#target_link_libraries(gtest ${CMAKE_THREAD_LIBS_INIT})
-
-add_subdirectory(ext/gtest-1.8.0)
-
-enable_testing()

@@ -67,5 +67,5 @@ matrix:
 
 script:
   - cmake CMakeLists.txt
-  - make ./executeTests
-  - ./executeTests
+  - make ./executeSomething
+  - ./executeSomething
